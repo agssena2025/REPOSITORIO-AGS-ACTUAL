@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro AGS</title>
+    <link rel="stylesheet" href="../css/estilo.css"> <!-- Ajusta la ruta al CSS según tu estructura -->
+</head>
+<body>
+    <div class="body_registro">
+        <div class="logo_registro">
+            <img src="/imagenes/AGS.png" alt="Logo AGS" class="Imagen_login">
+        </div>
+        <div class="cuadro_registro">  
+            <h3>Registro de usuario</h3>
+            <form action="registro.php" method="POST">
+                <input type="text" name="nombre" placeholder="Ingresar nombres" class="casilla_registro" required>
+                <input type="text" name="apellido" placeholder="Ingresar apellidos" class="casilla_registro" required>
+                <input type="text" name="identificacion" placeholder="Ingresar número de identificación" class="casilla_registro" required>
+                <input type="email" name="correo" placeholder="Ingresar correo" class="casilla_registro" required>
+                <input type="password" name="contraseña" placeholder="Crear contraseña" class="casilla_registro" required>
+
+                <select name="rol" class="casilla_registro" required>
+                    <option value="">Seleccione Rol</option>
+                    <option value="Administrador">Administrador</option>
+                    <option value="Coordinador">Coordinador</option>
+                    <option value="Técnico">Técnico</option>
+                </select>
+
+                <button type="submit" class="boton_registro">Registrar</button>
+            </form>
+            <p><a href="login.php">¿Ya tienes usuario? <em>Regresar a Login</em></a></p>
+        </div>
+    </div>
+</body>
+</html>
