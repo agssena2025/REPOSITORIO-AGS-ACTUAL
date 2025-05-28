@@ -1,8 +1,8 @@
 <?php
 session_start();
 
-require 'includes/validar_sesion.php'; // Asegura que solo usuarios autenticados accedan
-require 'includes/menu.php'; // Menú dinámico según el rol
+require_once 'includes/validar_sesion.php'; // Asegura que solo usuarios autenticados accedan
+require_once 'includes/menu.php'; // Menú dinámico según el rol
 
 ?>
 <!DOCTYPE html>
