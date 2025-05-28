@@ -3,11 +3,6 @@ session_start();
 require_once '../includes/validar_sesion.php';
 require_once '../db/conexion.php';
 
-// Solo usuarios con permisos (ejemplo)
-if (!in_array($_SESSION['rol'], ['administrador', 'coordinador', 'tecnico'])) {
-    header("Location: ../index.php");
-    exit();
-}
 
 $conn = obtenerConexion();
 
@@ -74,5 +69,6 @@ $reportes = $stmt->fetchAll(PDO::FETCH_ASSOC);
             <?php endif; ?>
         </tbody>
     </table>
+    <p><a href="../index.php">Volver al Dashboard</a></p>
 </body>
 </html>
